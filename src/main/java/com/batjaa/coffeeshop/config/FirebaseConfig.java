@@ -42,5 +42,9 @@ public class FirebaseConfig {
 				.setDatabaseUrl(databaseUrl).build();
 		FirebaseApp.initializeApp(options);
 		
+		// Check if a firebase instance is already running
+		if (FirebaseApp.getApps().size() == 0) {
+			FirebaseApp.initializeApp(options);
+		}
 	}
 }
