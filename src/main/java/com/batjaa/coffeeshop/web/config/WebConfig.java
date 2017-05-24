@@ -1,13 +1,8 @@
 package com.batjaa.coffeeshop.web.config;
 
-import org.modelmapper.Converter;
 import org.modelmapper.ModelMapper;
-import org.modelmapper.spi.MappingContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import com.batjaa.coffeeshop.domain.model.TestEntity;
-import com.batjaa.coffeeshop.web.dto.test.TestJson;
 
 @Configuration
 public class WebConfig {
@@ -16,17 +11,6 @@ public class WebConfig {
 	@Bean(name = MODEL_MAPPER)
 	public ModelMapper modelMapper() {
 		ModelMapper mapper = new ModelMapper();
-		mapper.addConverter(new Converter<TestEntity, TestJson>() {
-
-			public TestJson convert(MappingContext<TestEntity, TestJson> context) {
-				TestEntity entity = context.getSource();
-				TestJson testJson = context.getDestination();
-				testJson.setOutId(entity.getId());
-				testJson.setName(entity.getName());
-
-				return testJson;
-			}
-		});
 
 		return mapper;
 	}

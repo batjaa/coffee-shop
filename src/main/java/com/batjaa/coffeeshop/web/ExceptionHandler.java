@@ -6,9 +6,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.batjaa.coffeeshop.service.exception.FirebaseTokenInvalidException;
-import com.batjaa.coffeeshop.service.exception.FirebaseUserNotExistsException;
-
 @ControllerAdvice
 public class ExceptionHandler {
 	private class ErrorResponse {

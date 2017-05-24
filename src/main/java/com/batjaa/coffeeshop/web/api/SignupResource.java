@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.batjaa.coffeeshop.config.auth.firebase.FirebaseTokenHolder;
-import com.batjaa.coffeeshop.service.FirebaseService;
 import com.batjaa.coffeeshop.web.facade.WebFacade;
 
 @RestController
