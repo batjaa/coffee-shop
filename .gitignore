@@ -16,3 +16,4 @@ hs_err_pid*
 .settings/
 target/
 src/main/resources/coffee-shop-firebase-config.json
+spring-boot-starter-genereated/
