@@ -21,6 +21,9 @@ public class FirebaseConfig {
 		DatabaseReference firebase = FirebaseDatabase.getInstance().getReference();
 		return firebase;
 	}
+	
+	@Value("${rs.pscode.firebase.enabled}")
+	private Boolean firebaseEnabled;
 
 	@Value("${rs.pscode.firebase.database.url}")
 	private String databaseUrl;

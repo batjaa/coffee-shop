@@ -23,6 +23,10 @@ public class ProductEntity extends AbstractEntity {
 
 	public ProductEntity() {
 	}
+	
+	public ProductEntity(String name) {
+		this.name = name;
+	}
 
 	public ProductEntity(String name, String description, double price, ProductType type) {
 		this.name = name;
